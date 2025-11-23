@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Flux — Agenda Personal</title>
+<style>
+  :root {
+    --verde-oscuro: #064e3b;
+    --verde: #16a34a;
+    --verde-claro: #6ee7b7;
+    --fondo: #ecfdf5;
+    --blanco: #ffffff;
+  }
+
+  * { box-sizing: border-box; scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: var(--fondo);
+    color: #022c22;
+  }
+
+  /* Barra de navegación */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--verde-oscuro);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    z-index: 100;
+  }
+
+  header img {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 600;
+    transition: color 0.3s, transform 0.2s;
+  }
+
+  nav a:hover {
+    color: var(--verde-claro);
+    transform: translateY(-2px);
+  }
+
+  main {
+    margin-top: 80px;
+  }
+
+  section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+  }
+
+  section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  section:nth-child(even) {
+    background: var(--blanco);
+  }
+
+  h1, h2, h3 {
+    color: var(--verde-oscuro);
+  }
+
+  p {
+    max-width: 900px;
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  .btn {
+    display: inline-block;
+    background: var(--verde);
+    color: white;
+    padding: 10px 16px;
+    margin: 12px 6px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
+  }
+
+  .btn:hover {
+    background: var(--verde-claro);
+    color: #064e3b;
+    transform: scale(1.05);
+  }
+
+  iframe {
+    border: 0;
+    border-radius: 12px;
+    width: 80%;
+    height: 300px;
+    margin-top: 20px;
+  }
+
+  footer {
+    background: var(--verde-oscuro);
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+</style>
+</head>
+<body>
+
+  <!-- Barra de navegación -->
+  <header>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <img src="https://i.ibb.co/YTpsDjgW/logo-flux.jpg" alt="Logo Flux">
+      <h2>Flux</h2>
+    </div>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a href="#historia">Historia</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- INICIO -->
+    <section id="inicio" class="visible">
+      <h1>Flux — Agenda Personal</h1>
+      <p><strong>Flux</strong> es una herramienta digital diseñada para ayudar a los estudiantes a mantener el control de sus actividades, tareas, horarios y recordatorios. Su objetivo es ofrecer una forma moderna y atractiva de organizar la vida académica.</p>
+
+      <h3>¿Qué es Flux?</h3>
+      <p>Flux representa el movimiento continuo de la vida escolar: tareas, exámenes, avisos y responsabilidades. Su diseño está pensado para adaptarse al ritmo real de los estudiantes, ofreciendo una experiencia clara, útil y visualmente agradable.</p>
+
+      <a class="btn" href="#historia">Historia de la App</a>
+    </section>
+
+    <!-- HISTORIA TRANSMEDIA -->
+    <section id="historia">
+      <h2>Historia de Flux (Transmedia)</h2>
+      <p>Flux comenzó como una idea entre estudiantes que vivían un problema común: olvidar tareas, confundirse con horarios y recibir avisos importantes demasiado tarde. Entre clases, trabajos en equipo y actividades, surgió la pregunta: <strong>“¿Por qué no existe una app hecha realmente para estudiantes de preparatoria?”</strong></p>
+
+      <p>La app nació de experiencias reales: compañeros que usaban libretas, otros que confiaban en su memoria y varios que buscaban entre cientos de mensajes la tarea correcta. Esta desorganización afectaba calificaciones, causaba estrés y generaba confusión en los grupos.</p>
+
+      <p>Flux fue pensada como una agenda moderna: un calendario semanal claro, recordatorios automáticos, colores por materia y un espacio para mensajes del grupo. Todo reunido en un solo lugar, accesible desde cualquier dispositivo.</p>
+
+      <p>A medida que el proyecto crecía, el equipo decidió integrar más funciones: buscador de tareas, notificaciones, clasificación por prioridades y un diseño personalizado que representara frescura, dinamismo y organización.</p>
+
+      <p>Flux representa más que una app: es una solución creada por estudiantes para estudiantes, basada en problemas reales y pensada para mejorar la vida académica diaria.</p>
+
+      <a class="btn" href="#ubicacion">Ir a Ubicación</a>
+    </section>
+
+    <!-- INFORMACIÓN DE LA APP -->
+    <section id="informacion-app">
+      <h2>Información de la App</h2>
+
+      <h3>1. Descripción General</h3>
+      <p>Flux es una aplicación creada por estudiantes para estudiantes, diseñada para centralizar tareas, exámenes, horarios y avisos importantes en un solo espacio digital, práctico y fácil de usar.</p>
+
+      <h3>2. Objetivos de la App</h3>
+      <p>El objetivo principal es ayudar a los estudiantes a mantener una organización constante, reduciendo olvidos, mejorando hábitos académicos y facilitando la comunicación entre compañeros.</p>
+
+      <h3>3. Funciones Principales</h3>
+      <p>Flux integra herramientas como calendario semanal, recordatorios automáticos, colores por materia, buscador de tareas y espacio de avisos grupales.</p>
+
+      <h3>4. Beneficios</h3>
+      <p>La app reduce el estrés académico, mejora la puntualidad en la entrega de tareas, y ayuda a los estudiantes a administrar su tiempo de manera más eficiente.</p>
+
+      <h3>5. Historia de Desarrollo</h3>
+      <p>Nació de la necesidad real que tenían los estudiantes de mantener orden entre tantas actividades. Desde entonces, se ha convertido en una solución integral dentro del entorno escolar.</p>
+
+      <h3>6. Público Objetivo</h3>
+      <p>Principalmente estudiantes de preparatoria y secundaria que buscan una forma sencilla y moderna de organizar su vida académica.</p>
+
+      <h3>7. Problema que Resuelve</h3>
+      <p>Flux soluciona la desorganización escolar causada por múltiples materias, fechas de entrega, exámenes y avisos dispersos en diferentes plataformas.</p>
+
+      <h3>8. Cómo Funciona</h3>
+      <p>El usuario registra sus materias y tareas, recibe recordatorios automáticos, visualiza un calendario semanal y consulta avisos grupales en tiempo real.</p>
+
+      <h3>9. Características Técnicas</h3>
+      <p>La app se desarrolla con tecnologías como HTML, CSS, JavaScript y Firebase, permitiendo almacenamiento seguro y sincronización con varios dispositivos.</p>
+
+      <a class="btn" href="#inicio">Regresar al Inicio</a>
+      <a class="btn" href="#ubicacion">Ir a Ubicación</a>
+    </section>
+
+    <!-- UBICACIÓN -->
+    <section id="ubicacion">
+      <h2>Ubicación del Proyecto</h2>
+      <p>El desarrollo de <strong>Flux</strong> se llevó a cabo en Coatzacoalcos, Veracruz, específicamente en la zona de <em>El Tesoro</em>.</p>
+      <p><strong>Dirección:</strong> 96356, El Tesoro, 96536 Coatzacoalcos, Ver.</p>
+
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3794.046696373298!2d-94.43794712498726!3d18.153470582906712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85e9828fcb25768f%3A0x96bdefef04efdbec!2sEl%20Tesoro%2C%2096536%20Coatzacoalcos%2C%20Ver.!5e0!3m2!1ses-419!2smx!4v1731260000000!5m2!1ses-419!2smx"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+
+      <p><a class="btn" href="https://maps.app.goo.gl/Sy4QFnBxJyyvtUBH7" target="_blank">Ver en Google Maps</a></p>
+
+      <a class="btn" href="#inicio">Regresar</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>Proyecto Flux — HTML © 2025</p>
+  </footer>
+
+</main>
+
+<script>
+  const secciones = document.querySelectorAll("section");
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  secciones.forEach(sec => observer.observe(sec));
+</script>
+
+</body>
+</html>
+
+<script>
+  const secciones = document.querySelectorAll("section");
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  secciones.forEach(sec => observer.observe(sec));
